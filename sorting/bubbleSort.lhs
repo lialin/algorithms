@@ -3,7 +3,6 @@
 Author: Liang Lin
 Date: 2016-04-18
 
-
 > bubble :: (Ord a) => [a] -> [a]
 > bubble []  = []
 > bubble [a] = [a]

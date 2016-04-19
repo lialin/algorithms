@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
- # bubble sort has a "quadratic" worst-case running-time
- # Θ(n^2)
+# Author: Liang Lin
+# Email: lianglin@outlook.com
+# Date: 2016-03-27
+
+# bubble sort has a "quadratic" worst-case running-time
+# Θ(n^2)
 def bubbleSort(A):
     n = len(A)
     for i in xrange(n-1):
