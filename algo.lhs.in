@@ -1,0 +1,8 @@
+> module %MODULE% where
+
+Author: %AUTHOR%
+Email: %EMAIL%
+Date: %DATE%
+
+> %FUN% ::
+> %FUN%
