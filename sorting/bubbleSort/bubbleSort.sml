@@ -1,3 +1,8 @@
+(*test:
+$ sml
+- use "sorting/bubbleSort.sml";
+- bubbleSort [10,20,2,3,7,8,101,80,81]*);
+
 fun bubble []  = []
   | bubble [a] = [a]
   | bubble (a :: b :: xs) =

@@ -13,3 +13,8 @@ Date: 2016-04-18
 > bubbleSort :: (Ord a) => [a] -> [a]
 > bubbleSort []       = []
 > bubbleSort (x : xs) = bubble(x : bubbleSort xs)
+
+test
+Prelude> :load BubbleSort
+*BubbleSort> bubbleSort [6,2,3,8,9]
+*BubbleSort> bubbleSort [10,6,2,3,8,9,1,7,101,20,90,86]
