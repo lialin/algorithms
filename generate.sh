@@ -75,13 +75,13 @@ done
 #     unset template
 # done
 
-# while [ -z "$email" ]; do
-#     if [ -n "$def_email" ]; then
-#         m=" [default: $def_email]"
-#     fi
-#     ask "Email address${m}"
-#     read email && [ -n "$email" ] && break || email="$def_email"
-# done
+while [ -z "$email" ]; do
+    if [ -n "$def_email" ]; then
+        m=" [default: $def_email]"
+    fi
+    ask "Email address${m}"
+    read email && [ -n "$email" ] && break || email="$def_email"
+done
 
 while [ -z "$fun" ]; do
     if [ -n "$def_fun" ]; then
