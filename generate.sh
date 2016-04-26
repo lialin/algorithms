@@ -5,7 +5,7 @@
 #
 # Liang Lin
 #------------------------------------------------------------------------------
-MLFILE=algo.ml
+MLFILE=algo.sml
 LHSFILE=algo.lhs
 PYFILE=algo.py
 README=readme.md
@@ -119,12 +119,12 @@ if [ -n "$outdir" ]; then
 else
     exec 1>&3   # Restore old file descriptor
 fi
-
+module="$(tr '[:lower:]' '[:upper:]' <<< ${fun:0:1})${fun:1}"
 sed -e "s!%AUTHOR%!${author}!g" \
     -e "s!%DATE%!${now}!g" \
     -e "s!%EMAIL%!${email}!g" \
     -e "s!%FUN%!${fun}!g" \
-    -e "s!%MODULE%!${fun^}!g" \
+    -e "s!%MODULE%!${module}!g" \
     ${dir}/${LHSFILE}.in
 
 #----------------------------------------
@@ -160,7 +160,7 @@ exec 1>&3 3>&-       # Restore stout
 
 echo "done"
 
-if [ -n "$outfile" ]; then
+if [ -n "$outdir" ]; then
     echo "git add $outdir files"
     git add $outdir
     echo "git commit $outdir"
