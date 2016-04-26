@@ -96,7 +96,7 @@ done
 #----------------------------------------
 
 if [ -n "$outdir" ]; then
-    mlfile="$outdir/$MLFILE"
+    mlfile="$outdir/$fun.sml"
     echo "Creating files..."
     exec > "$mlfile" || exit 1
 else
@@ -114,7 +114,7 @@ sed -e "s!%AUTHOR%!${author}!g" \
 # Literate Haskell
 #----------------------------------------
 if [ -n "$outdir" ]; then
-    lhsfile="$outdir/$LHSFILE"
+    lhsfile="$outdir/$fun.lhs"
     exec > "$lhsfile" || exit 1
 else
     exec 1>&3   # Restore old file descriptor
@@ -131,7 +131,7 @@ sed -e "s!%AUTHOR%!${author}!g" \
 # Python
 #----------------------------------------
 if [ -n "$outdir" ]; then
-    pyfile="$outdir/$PYFILE"
+    pyfile="$outdir/$fun.py"
     exec > "$pyfile" || exit 1
 else
     exec 1>&3   # Restore old file descriptor
