@@ -11,9 +11,9 @@ def countSort(A, k):
   # iterate through the list to find out the marked index
   incr = 0
   for i in xrange(k+1):
-    if B[i] > 0:
+    for j in xrange(B[i]):
       A[incr] = i
       incr += 1
   return A
 
-print(countSort([2,51,12,63,9,33,7,89, 10, 15], 90))
+print(countSort([2,51,12,12,63,9,33,7,89, 10, 15], 90))
